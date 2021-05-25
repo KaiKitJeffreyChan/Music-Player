@@ -11,10 +11,12 @@ export default function Player({ accessToken, trackUri }) {
       token={accessToken}
       showSaveIcon
       //if there are songs, pass to array or empty
+      magnifySliderOnHover={true}
       uris={trackUri ? [trackUri] : []}
       play={play}
       callback={(state) => {
         if (!state.isPLaying) setPlay(false);
+        console.log(state);
       }}
     />
   );
